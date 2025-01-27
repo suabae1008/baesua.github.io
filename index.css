@@ -1,0 +1,1012 @@
+@-webkit-keyframes scrollIcon {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    transform: translateX(-50%) translateY(130%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+@keyframes scrollIcon {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  90% {
+    transform: translateX(-50%) translateY(130%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  display: block;
+}
+
+/* button */
+::-webkit-scrollbar-button {
+  border: #121212 solid 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #121212;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+  border: #121212 solid 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* css */
+body {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-size: 20px;
+  color: #121212;
+  color: #121212;
+  overflow-x: hidden;
+}
+body.dark {
+  color: #eee;
+  background-color: #121212;
+}
+body.dark .mainContainer .mainFixedBar.on {
+  border-right: 1px #aaa solid;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-slide a img {
+  box-shadow: 0px 0px 2.2px -22px rgba(255, 255, 255, 0.042), 0px 0px 5.3px -22px rgba(255, 255, 255, 0.061), 0px 0px 10px -22px rgba(255, 255, 255, 0.075), 0px 0px 17.9px -22px rgba(255, 255, 255, 0.089), 0px 0px 33.4px -22px rgba(255, 255, 255, 0.108), 0px 0px 80px -22px rgba(255, 255, 255, 0.15);
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectNum {
+  color: #aaa;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectTitle {
+  color: #ddd;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a button:hover {
+  color: #fff;
+  background-color: #121212;
+  border: 1px #eee solid;
+  cursor: pointer;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-button-prev,
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-button-next {
+  color: #eee;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet {
+  color: #eee;
+  opacity: 1;
+  background: #121212;
+  border: 1px #eee solid;
+}
+body.dark .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet-active {
+  color: #121212;
+  background: #eee;
+}
+body h3 {
+  font-size: 60px;
+  font-weight: 700;
+}
+body .goUp {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 5%;
+  right: 28px;
+  border-radius: 50%;
+  background-color: #fff;
+  filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.3));
+  z-index: 9999;
+  transition: 0.3s;
+}
+body .goUp .goUpBtn {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .goUp .goUpBtn .goUpWhite {
+  display: none;
+}
+body .goUp:hover {
+  transform: translateY(-10%);
+  background-color: #121212;
+}
+body .goUp:hover .goUpBlack {
+  display: none;
+}
+body .goUp:hover .goUpWhite {
+  display: block;
+}
+body .goUp.on {
+  background-color: rgba(18, 18, 18, 0.5254901961);
+  border: #fff solid 1px;
+}
+body .goUp.on .goUpBtn .goUpBlack {
+  display: none;
+}
+body .goUp.on .goUpBtn .goUpWhite {
+  display: block;
+}
+body .goUp.on:hover {
+  background-color: #fff;
+}
+body .goUp.on:hover .goUpBtn .goUpBlack {
+  display: block;
+}
+body .goUp.on:hover .goUpBtn .goUpWhite {
+  display: none;
+}
+body .darkMode {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 5%;
+  right: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  filter: drop-shadow(3px 5px 3px rgba(0, 0, 0, 0.3));
+  z-index: 9999;
+  transition: 0.3s;
+  cursor: pointer;
+}
+body .darkMode:hover {
+  transform: translateY(-10%);
+  background-color: #121212;
+}
+body .darkMode .darkToggle {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .darkMode .darkToggle .moon {
+  width: 60%;
+}
+body .darkMode .darkToggle .sun {
+  width: 70%;
+  display: none;
+}
+body .darkMode.on {
+  background-color: rgba(18, 18, 18, 0.5254901961);
+  border: #fff solid 1px;
+}
+body .darkMode.lightMode .moon {
+  display: none;
+}
+body .darkMode.lightMode .sun {
+  display: block;
+}
+body header {
+  width: 100%;
+  padding: 30px 54px 0 0;
+  position: fixed;
+  z-index: 9999;
+  color: #fff;
+  transition-duration: 0.8s;
+  transition-property: color, background-color;
+}
+body header.active {
+  color: #121212;
+  background-color: #fff;
+  right: 0;
+  width: 75%;
+  height: 80px;
+}
+body header.active #gnb li a::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 0;
+  height: 10px;
+  transform: scaleX(0);
+  transform-origin: right;
+  border-bottom: solid 3px #121212;
+  transition: transform 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
+}
+body header.active #gnb li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+body header.dark {
+  color: #eee;
+  background-color: #121212;
+  right: 0;
+  width: 75%;
+  height: 80px;
+}
+body header #gnb {
+  width: 500px;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  right: 54px;
+}
+body header #gnb li a::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 0;
+  height: 10px;
+  transform-origin: right;
+  transform: scaleX(0);
+  border-bottom: solid 3px #fff;
+  transition: transform 0.2s cubic-bezier(0.67, 0.01, 0.4, 0.94);
+}
+body header #gnb li a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+body main {
+  background-color: #121212;
+  transition: 0.8s;
+}
+body main.active {
+  background-color: #fff;
+}
+body main .mainTitle {
+  color: #fff;
+  background: #121212 url(./images/mainTitleBg2.png) no-repeat 50%/cover;
+  height: 100vh;
+  margin-bottom: 600px;
+  z-index: -1;
+  transition: 0.8s;
+}
+body main .mainTitle.active {
+  background: #fff url(./images/mainTitleBg2.png) no-repeat 0/cover;
+}
+body main .mainTitle .mainTitleWrapper {
+  position: relative;
+  height: 100%;
+}
+body main .mainTitle .mainTitleWrapper h1 {
+  background: url(./images/logo.png) no-repeat 50%/cover;
+  width: 154px;
+  height: 81px;
+  text-indent: -9999px;
+  position: absolute;
+  left: 54px;
+  top: 20px;
+}
+body main .mainTitle .mainTitleWrapper h1 a {
+  width: 100%;
+  height: 100%;
+}
+body main .mainTitle .mainTitleWrapper .titleText {
+  position: relative;
+  max-width: 1920px;
+  height: 100%;
+  transform: rotate(-12deg);
+}
+body main .mainTitle .mainTitleWrapper .titleText .mobileText {
+  display: none;
+}
+body main .mainTitle .mainTitleWrapper .year {
+  font-size: 50px;
+  font-weight: 500;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: default;
+}
+body main .mainTitle .mainTitleWrapper .title {
+  text-align: center;
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: default;
+}
+body main .mainTitle .mainTitleWrapper .title .titleName {
+  font-size: 76px;
+  font-weight: 700;
+}
+body main .mainTitle .mainTitleWrapper .title .titlePf {
+  font-size: 64px;
+  font-family: "Italiana", serif;
+  font-weight: 400;
+  margin-top: -5px;
+}
+body main .mainTitle .mainTitleWrapper .scrollWrapper {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: default;
+}
+body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon {
+  text-indent: -9999px;
+  position: relative;
+  height: 42px;
+}
+body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollCircle {
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-indent: -9999px;
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-animation: scrollIcon 1.2s infinite;
+          animation: scrollIcon 1.2s infinite;
+}
+body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollBar {
+  width: 22px;
+  height: 43px;
+  border: 1px #fff solid;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollDown {
+  font-size: 12px;
+  margin-top: 10px;
+}
+body main .mainTitle .mainTitleWrapper .email {
+  font-size: 16px;
+  width: 230px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 0 20px 54px;
+  text-align: center;
+  border: 1px #bbb solid;
+  color: #bbb;
+  border-radius: 20px;
+  background-color: rgba(18, 18, 18, 0.5254901961);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+}
+body main .mainTitle .mainTitleWrapper .email:hover {
+  border: #fff solid 1px;
+  color: #fff;
+}
+body main .mainTitle .mainTitleWrapper .copyRight {
+  font-size: 16px;
+  margin: 0 54px 20px 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: default;
+}
+body main .mainContainer {
+  position: relative;
+  height: 5300px;
+}
+body main .mainContainer .mainFixedBar {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  width: 25%;
+  height: 100vh;
+  padding: 54px;
+  transition: 0.8s;
+}
+body main .mainContainer .mainFixedBar.on {
+  border-right: #121212 solid 1px;
+}
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper a h2 {
+  display: block;
+  background: url(./images/logo2.png) no-repeat 50%/cover;
+  width: 358px;
+  height: 181px;
+  text-indent: -9999px;
+  transition: 1s;
+}
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper a h2.on {
+  display: none;
+}
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper div {
+  margin: 0 auto;
+}
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .contactBtn {
+  background-color: #121212;
+  color: #fff;
+  width: 245px;
+  height: 65px;
+  line-height: 65px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 50px;
+  transition: 0.8s;
+}
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .contactBtn span {
+  font-size: 24px;
+}
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .contactBtn:hover {
+  background-color: #fff;
+  border: #121212 solid 1px;
+  color: #121212;
+}
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .contactBtn.on {
+  color: #121212;
+}
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .contactBtn.dark {
+  color: #eee;
+  border: #eee 1px solid;
+}
+body main .mainContainer .mainFixedBar .mainFixedBarWarpper div .copyRight {
+  font-size: 16px;
+  font-weight: 600;
+}
+body main .mainContainer .mainContents {
+  position: absolute;
+  width: 75%;
+  top: 0;
+  left: 467px;
+  height: 100%;
+  padding: 60px;
+  margin-top: 120px;
+}
+body main .mainContainer .mainContents .mainWork {
+  margin-top: 71px;
+}
+body main .mainContainer .mainContents .mainWork .titleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+}
+body main .mainContainer .mainContents .mainWork .titleWrapper .pfProcess {
+  margin-top: 2px;
+  font-size: 14px;
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: #121212 solid 1px;
+  border-radius: 50px;
+  transition: 0.6s;
+}
+body main .mainContainer .mainContents .mainWork .titleWrapper .pfProcess:hover {
+  background-color: #121212;
+  color: #fff;
+}
+body main .mainContainer .mainContents .mainWork .swiper {
+  margin: 0 auto;
+  width: 100%;
+  height: 700px;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide a {
+  width: 50%;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide a img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 8px;
+  background-color: #121212;
+  border-radius: 20px;
+  box-shadow: 1.4px 1.4px 2.2px -30px rgba(0, 0, 0, 0.07), 3.3px 3.3px 5.3px -30px rgba(0, 0, 0, 0.101), 6.3px 6.3px 10px -30px rgba(0, 0, 0, 0.125), 11.2px 11.2px 17.9px -30px rgba(0, 0, 0, 0.149), 20.9px 20.9px 33.4px -30px rgba(0, 0, 0, 0.18), 50px 50px 80px -30px rgba(0, 0, 0, 0.25);
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper {
+  text-align: left;
+  margin: 0 100px;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectNum {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectTitle {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectDes {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  padding-left: 5px;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectLang {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-left: 5px;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper .projectLang li {
+  font-size: 14px;
+  font-weight: 600;
+  color: #888;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a {
+  width: 100%;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a button {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 30px;
+  background-color: #fff;
+  border: #121212 solid 1px;
+  border-radius: 30px;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-slide .desWrapper a button:hover {
+  color: #fff;
+  background-color: #121212;
+  cursor: pointer;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-button-prev,
+body main .mainContainer .mainContents .mainWork .swiper .swiper-button-next {
+  color: #121212;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color: #121212;
+  opacity: 1;
+  background: #fff;
+  border: #121212 solid 1px;
+}
+body main .mainContainer .mainContents .mainWork .swiper .swiper-pagination-bullet-active {
+  color: #fff;
+  background: #121212;
+}
+body main .mainContainer .mainContents .mainAbout {
+  margin-top: 300px;
+}
+body main .mainContainer .mainContents .mainAbout .aboutDes1 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 95px;
+  padding-left: 30px;
+}
+body main .mainContainer .mainContents .mainAbout .aboutDes1 strong {
+  font-weight: 700;
+}
+body main .mainContainer .mainContents .mainAbout .aboutDes2 {
+  margin-top: 60px;
+  font-size: 17px;
+  line-height: 1.6;
+  padding-left: 30px;
+}
+body main .mainContainer .mainContents .mainAbout .container {
+  margin-top: 180px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+body main .mainContainer .mainContents .mainAbout .container h5 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+body main .mainContainer .mainContents .mainAbout .container ul {
+  width: 400px;
+}
+body main .mainContainer .mainContents .mainAbout .container ul li {
+  font-size: 17px;
+  line-height: 1.6;
+  display: flex;
+  justify-content: flex-start;
+}
+body main .mainContainer .mainContents .mainAbout .container .certi {
+  margin-right: 160px;
+}
+body main .mainContainer .mainContents .mainAbout .container .certi ul li p:first-child {
+  width: 150px;
+}
+body main .mainContainer .mainContents .mainAbout .container .career {
+  width: 100%;
+}
+body main .mainContainer .mainContents .mainAbout .container .career ul li {
+  width: 700px;
+}
+body main .mainContainer .mainContents .mainAbout .container .career ul li p:first-child {
+  width: 30%;
+}
+body main .mainContainer .mainContents .mainAbout .container .career ul li p:last-child {
+  width: 50%;
+}
+body main .mainContainer .mainContents .mainSkills {
+  position: relative;
+  height: 2800px;
+}
+body main .mainContainer .mainContents .mainSkills h3 {
+  text-align: right;
+  margin-top: 300px;
+}
+body main .mainContainer .mainContents .mainSkills .skillWrapper {
+  margin-top: 400px;
+}
+body main .mainContainer .mainContents .mainSkills .skillPos {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: -30%;
+  margin-top: 40px;
+}
+body main .mainContainer .mainContents .mainSkills .htmlPos {
+  width: 565px;
+  transform: translateX(50%) translateY(-40%);
+}
+body main .mainContainer .mainContents .mainSkills .jsPos {
+  width: 565px;
+  transform: translateX(130%) translateY(-25%);
+}
+body main .mainContainer .mainContents .mainSkills .reactPos {
+  width: 565px;
+  transform: translateX(10%) translateY(-20%);
+}
+body main .mainContainer .mainContents .mainSkills .graphicsPos {
+  width: 565px;
+  transform: translateX(90%) translateY(-8%);
+  bottom: -42%;
+}
+body main .mainContainer .mainContents .mainSkills .gitPos {
+  width: 565px;
+  transform: translateX(45%);
+}
+body main .mainContainer .mainContents .mainSkills .skills {
+  background: url(./images/mainSkills.svg) no-repeat 50%/cover;
+  width: 565px;
+  height: 407.71px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: default;
+  transition: 0.3s;
+}
+body main .mainContainer .mainContents .mainSkills .skills h5 {
+  font-size: 30px;
+  font-weight: 500;
+  padding: 15px 25px;
+}
+body main .mainContainer .mainContents .mainSkills .skills ul {
+  line-height: 2;
+  padding: 44px;
+}
+body main .mainContainer .mainContents .mainSkills .skills ul li {
+  position: relative;
+  padding-left: 30px;
+}
+body main .mainContainer .mainContents .mainSkills .skills ul li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/file.svg) no-repeat 50%/cover;
+  transition: 0.3s;
+}
+body main .mainContainer .mainContents .mainSkills .skills:hover {
+  background: url(./images/mainSkillsB.svg) no-repeat 50%/cover;
+  color: #fff;
+}
+body main .mainContainer .mainContents .mainSkills .skills:hover li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/fileW.svg) no-repeat 50%/cover;
+}
+body main .mainContainer .mainContents .mainSkills .skills.dark {
+  background: url(./images/mainSkillsB.svg) no-repeat 50%/cover;
+  color: #eee;
+}
+body main .mainContainer .mainContents .mainSkills .skills.dark li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/fileW.svg) no-repeat 50%/cover;
+}
+body main .mainContainer .mainContents .mainSkills .js {
+  margin-top: 40px;
+  background: url(./images/mainSkills2.svg) no-repeat 50%/cover;
+  width: 565px;
+  height: 535px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: default;
+  transition: 0.3s;
+}
+body main .mainContainer .mainContents .mainSkills .js h5 {
+  font-size: 30px;
+  font-weight: 500;
+  padding: 15px 25px;
+}
+body main .mainContainer .mainContents .mainSkills .js ul {
+  line-height: 2;
+  padding: 44px;
+}
+body main .mainContainer .mainContents .mainSkills .js ul li {
+  position: relative;
+  padding-left: 30px;
+}
+body main .mainContainer .mainContents .mainSkills .js ul li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/file.svg) no-repeat 50%/cover;
+  transition: 0.3s;
+}
+body main .mainContainer .mainContents .mainSkills .js:hover {
+  background: url(./images/mainSkills2B.svg) no-repeat 50%/cover;
+  color: #fff;
+}
+body main .mainContainer .mainContents .mainSkills .js:hover li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/fileW.svg) no-repeat 50%/cover;
+}
+body main .mainContainer .mainContents .mainSkills .js.dark {
+  background: url(./images/mainSkills2B.svg) no-repeat 50%/cover;
+  color: #eee;
+}
+body main .mainContainer .mainContents .mainSkills .js.dark li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/fileW.svg) no-repeat 50%/cover;
+}
+body main .mainContainer .mainContents .mainSkills .graphics {
+  margin-top: 40px;
+  background: url(./images/mainSkills3.svg) no-repeat 50%/cover;
+  width: 565px;
+  height: 631px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: default;
+  transition: 0.3s;
+}
+body main .mainContainer .mainContents .mainSkills .graphics h5 {
+  font-size: 30px;
+  font-weight: 500;
+  padding: 15px 25px;
+}
+body main .mainContainer .mainContents .mainSkills .graphics ul {
+  line-height: 2;
+  padding: 44px;
+}
+body main .mainContainer .mainContents .mainSkills .graphics ul li h6 {
+  font-weight: 600;
+}
+body main .mainContainer .mainContents .mainSkills .graphics ul li .graphicDes {
+  padding: 10px;
+}
+body main .mainContainer .mainContents .mainSkills .graphics ul li li {
+  position: relative;
+  padding-left: 30px;
+}
+body main .mainContainer .mainContents .mainSkills .graphics ul li li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/file.svg) no-repeat 50%/cover;
+  transition: 0.3s;
+}
+body main .mainContainer .mainContents .mainSkills .graphics:hover {
+  background: url(./images/mainSkills3B.svg) no-repeat 50%/cover;
+  color: #fff;
+}
+body main .mainContainer .mainContents .mainSkills .graphics:hover .graphicDes li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/fileW.svg) no-repeat 50%/cover;
+}
+body main .mainContainer .mainContents .mainSkills .graphics.dark {
+  background: url(./images/mainSkills3B.svg) no-repeat 50%/cover;
+  color: #eee;
+}
+body main .mainContainer .mainContents .mainSkills .graphics.dark .graphicDes li::before {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(./images/fileW.svg) no-repeat 50%/cover;
+}
+body main .mainContainer .mainContents .mainSkills .git {
+  transition: 0.3s;
+}
+body main .mainContainer .mainContents .mainSkills .git.on {
+  background: url(./images/mainSkillsGit.svg) no-repeat 50%/cover;
+}
+body main .mainContact {
+  color: #fff;
+  margin-top: 600px;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 100px);
+}
+body main .mainContact .contactBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 100px);
+  background: #121212 url(./images/footerBg.png) no-repeat 100%/cover;
+}
+body main .mainContact .contactBg .bgBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #121212 url(./images/footerBg.png) no-repeat 100%/cover;
+}
+body main .mainContact .contactBg .bgBox:first-child {
+  filter: blur(15px) brightness(0.5) saturate(0.8);
+  -webkit-filter: blur(15px) brightness(0.5) saturate(0.8);
+}
+body main .mainContact .contactBg .bgBox:nth-child(2) {
+  -webkit-clip-path: circle(120px at var(--x) var(--y));
+          clip-path: circle(120px at var(--x) var(--y));
+}
+body main .mainContact .contactBg .circle {
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 3.7px -20px rgba(0, 0, 0, 0.034), 0px 0px 8.8px -20px rgba(0, 0, 0, 0.048), 0px 0px 16.5px -20px rgba(0, 0, 0, 0.06), 0px 0px 29.5px -20px rgba(0, 0, 0, 0.072), 0px 0px 55.1px -20px rgba(0, 0, 0, 0.086), 0px 0px 132px -20px rgba(0, 0, 0, 0.12);
+  transform: translate(var(--x), var(--y));
+}
+body main .mainContact .text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main .mainContact .text .textCon {
+  width: 40vw;
+  position: absolute;
+  cursor: default;
+}
+body main .mainContact .text .textCon h3 {
+  margin-bottom: 125px;
+}
+body main .mainContact .text .textCon .name {
+  width: 15vw;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 45px;
+  letter-spacing: 1.1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+body main .mainContact .text .textCon .name .nameKo {
+  font-size: 20px;
+  font-weight: 300;
+}
+body main .mainContact .text .textCon .contactBtn {
+  width: 20vw;
+  display: flex;
+  justify-content: space-between;
+}
+body main .mainContact .text .textCon .contactBtn button {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Pretendard";
+  background-color: rgba(18, 18, 18, 0.5254901961);
+  border: #fff solid 1px;
+  border-radius: 30px;
+  padding: 10px 35px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+body main .mainContact .text .textCon .contactBtn button:hover {
+  background-color: #fff;
+  color: #121212;
+}
+body footer {
+  position: relative;
+  color: #fff;
+  border-top: #fff solid 1px;
+}
+body footer .ftWrapper {
+  height: 100px;
+  background-color: #121212;
+  display: flex;
+  align-items: center;
+}
+body footer .ftWrapper .copyright {
+  width: 330px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 12px 30px;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  margin-left: 54px;
+  cursor: default;
+}
+
+/* mediaquery min-width: 2000px */
+@media screen and (min-width: 2000px) {
+  body main .mainTitle .mainTitleWrapper .mobileText {
+    display: none;
+  }
+  body main .mainContainer {
+    transition: 0.8s;
+  }
+  body main .mainContainer .mainContents {
+    width: 70%;
+    left: 600px;
+  }
+}
+/* mediaquery max-width: 768px */
+@media screen and (max-width: 768px) {
+  body main .mainTitle .mainTitleWrapper .titleText img {
+    display: none;
+  }
+  body main .mainTitle .mainTitleWrapper .titleText .mobileText {
+    display: block;
+    transform: scale(1.5) translateY(15%) translateX(5%);
+  }
+}
