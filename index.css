@@ -238,7 +238,7 @@ body header {
   padding: 30px 54px 0 0;
   position: fixed;
   z-index: 9999;
-  color: #fff;
+  color: #000000;
   transition-duration: 0.8s;
   transition-property: color, background-color;
 }
@@ -320,7 +320,7 @@ body main.active {
 /* mainTitle (메인페이지) */
 body main .mainTitle {
   color: #ffffff;
-  background: #ffffff url(./Images/tree.jpeg) no-repeat 50%/cover;
+  background: #ffffff;
   background-size: contain; /* 이미지 비율 유지 & 요소에 맞춤 */
   height: 100vh;
   margin-bottom: 600px;
@@ -328,7 +328,16 @@ body main .mainTitle {
   transition: 0.8s;
 }
 body main .mainTitle.active {
-  background: #fff url(./Images/tree.jpeg) no-repeat 0/cover;
+  background: #fff;
+}
+body main .mainTitle .mainTitleWrapper .bgimg {
+  background: url(./Images/tree.jpeg) no-repeat center top;
+  background-size: auto 90%; /* 높이는 90%로 설정하고, 가로는 자동으로 조정 */
+  height: 95vh; /* 높이를 화면의 90%로 설정 */
+  width: 100%; /* 너비는 100%로 설정, 가로는 자동으로 조정 */
+  position: absolute; /* 요소를 절대 위치로 배치 */
+  top: 0;
+  left: 0;
 }
 body main .mainTitle .mainTitleWrapper {
   position: relative;
