@@ -3,6 +3,7 @@ active - 화이트모드
 */
 
 /*------ 메인 화면에 있는 스크롤 아이콘 (동그라미) 조절. webkit(옛날버젼) ------*/
+/*
 @-webkit-keyframes scrollIcon {
   0% {
     transform: translateX(-50%) translateY(0);
@@ -25,7 +26,7 @@ active - 화이트모드
     transform: translateX(-50%) translateY(0);
   }
 }
-
+*/
 /*------ custom scrollbar ------*/
 /* width */
 ::-webkit-scrollbar {
@@ -241,7 +242,14 @@ body header {
   transition-duration: 0.8s;
   transition-property: color, background-color;
 }
+body header #gnb li a {
+  color: inherit; /* 헤더의 color를 따라가도록 설정 */
+  text-decoration: none; /* 밑줄 제거 */
+}
 
+body header #gnb li a:visited {
+  color: inherit; /* 방문한 후에도 같은 색 유지 */
+}
 /* 헤더 하얀색 */
 body header.active {
   color: #121212;
@@ -275,6 +283,7 @@ body header.dark {
   height: 80px;
 }
 body header #gnb {
+  list-style: none; /* 불릿 포인트 제거 */
   width: 500px;
   font-size: 24px;
   font-weight: 700;
@@ -310,18 +319,17 @@ body main.active {
 
 /* mainTitle (메인페이지) */
 body main .mainTitle {
-  color: #fff;
-  background: url(./Images/lemon.jpg) no-repeat 50%/cover;
+  color: #ffffff;
+  background: #ffffff url(./Images/tree.jpeg) no-repeat 50%/cover;
+  background-size: contain; /* 이미지 비율 유지 & 요소에 맞춤 */
   height: 100vh;
   margin-bottom: 600px;
   z-index: -1;
   transition: 0.8s;
 }
 body main .mainTitle.active {
-  background: #fff url(./Images/lemon.jpg) no-repeat 0/cover;
+  background: #fff url(./Images/tree.jpeg) no-repeat 0/cover;
 }
-
-/* mainTitle .mainTitleWrapper*/
 body main .mainTitle .mainTitleWrapper {
   position: relative;
   height: 100%;
@@ -362,7 +370,7 @@ body main .mainTitle .mainTitleWrapper .title {
   width: 500px;
   height: 200px;
   position: absolute;
-  bottom: 1%;
+  bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
   cursor: default;
@@ -371,6 +379,7 @@ body main .mainTitle .mainTitleWrapper .title .titleName {
   font-size: 76px;
   font-weight: 700;
 }
+
 /* body main .mainTitle .mainTitleWrapper .title .titlePf {
   font-size: 64px;
   font-family: "Italiana", serif;
@@ -378,16 +387,19 @@ body main .mainTitle .mainTitleWrapper .title .titleName {
   margin-top: -5px;
 } */
 body main .mainTitle .mainTitleWrapper .title .titlePf {
+  position: absolute;
+  bottom: -10%;
   font-size: 64px;
   font-family: "Italiana", serif;
   font-weight: 600;
   margin-top: -5px;
-  color: #fff; /* 텍스트 색상 */
+  color: #000000; /* 텍스트 색상 */
+  /* 
   text-shadow: 
-    1px 1px 0 #000,  
-    -1px -1px 0 #000,  
-    1px -1px 0 #000,  
-    -1px 1px 0 #000; /* 검은색 테두리 효과 */
+    2px 2px 0 #000,  
+    -2px -2px 0 #000,  
+    2px -2px 0 #000,  
+    -2px 2px 0 #000; 검은색 테두리 효과 */
 }
 body main .mainTitle .mainTitleWrapper .scrollWrapper {
   position: absolute;
