@@ -288,6 +288,8 @@ body header #gnb {
   font-size: 24px;
   font-weight: 700;
   display: flex;
+  flex-direction: column; /* 수직 정렬 */
+  align-items: flex-end; /* 오른쪽 정렬 */
   justify-content: space-between;
   position: absolute;
   right: 54px;
@@ -452,8 +454,10 @@ body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollCircle 
   top: 30px;
   left: 1%;
   transform: translateX(-50%);
+  /*
   -webkit-animation: scrollIcon 1.2s infinite;
   animation: scrollIcon 1.2s infinite;
+  */
 }
 /*
 body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollBar {
