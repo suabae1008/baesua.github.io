@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+.v599_21 {
+  width: 100%;
+  height: 832px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.v609_8 {
+  width: 763px;
+  height: 847px;
+  background: url("../images/v609_8.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 517px;
+  overflow: hidden;
+}
+.v609_2 {
+  width: 500px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 205px;
+  left: 28px;
+  font-family: Inter;
+  font-weight: Italic;
+  font-size: 128px;
+  opacity: 1;
+  text-align: left;
+}
+.v609_3 {
+  width: 638px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 454px;
+  left: 28px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 128px;
+  opacity: 1;
+  text-align: left;
+}
+.v609_5 {
+  width: 638px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 330px;
+  left: 28px;
+  font-family: Inter;
+  font-weight: Thin;
+  font-size: 128px;
+  opacity: 1;
+  text-align: left;
+}
+.v609_11 {
+  width: 198px;
+  height: 41px;
+  background: rgba(190,190,190,0.699999988079071);
+  opacity: 1;
+  position: absolute;
+  top: 624px;
+  left: 38px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+}
+.v609_12 {
+  width: 169px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 633px;
+  left: 52px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: center;
+}
+.v609_22 {
+  width: 73px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 267px;
+  left: 1088px;
+  font-family: Inter;
+  font-weight: Italic;
+  font-size: 48px;
+  opacity: 1;
+  text-align: left;
+}
+.v609_24 {
+  width: 198px;
+  height: 41px;
+  background: rgba(190,190,190,0.699999988079071);
+  opacity: 1;
+  position: absolute;
+  top: 624px;
+  left: 248px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+}
+.v609_25 {
+  width: 169px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 633px;
+  left: 262px;
+  font-family: Inter;
+  font-weight: Regular;
+  font-size: 20px;
+  opacity: 1;
+  text-align: center;
+}

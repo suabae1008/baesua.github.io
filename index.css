@@ -284,7 +284,7 @@ body header.dark {
 }
 body header #gnb {
   list-style: none; /* 불릿 포인트 제거 */
-  width: 500px;
+  width: 500px; /*기본 width*/
   font-size: 24px;
   font-weight: 700;
   display: flex;
@@ -294,6 +294,22 @@ body header #gnb {
   position: absolute;
   right: 54px;
 }
+/* 화면이 768px 이하일 때 */
+@media screen and (max-width: 768px) {
+  body header #gnb {
+    width: 80%; /* 화면 크기가 작은 경우 80%로 설정 */
+    right: 10px; /* 오른쪽 여백을 조금 추가 */
+  }
+}
+
+/* 화면이 480px 이하일 때 */
+@media screen and (max-width: 480px) {
+  body header #gnb {
+    width: 90%; /* 화면이 더 작아지면 width를 더 줄여줌 */
+    right: 5px; /* 오른쪽 여백을 더 줄임 */
+  }
+}
+
 body header #gnb li a::after {
   content: "";
   display: block;
