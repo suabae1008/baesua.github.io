@@ -29,6 +29,8 @@
       href="https://fonts.googleapis.com/css2?family=Italiana&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
 
     <!-- [fonts.css] 추가 폰트 설정 -->
     <link rel="stylesheet" href="./fonts.css" />
@@ -48,7 +50,7 @@
     <!-- [style.css] 포트폴리오 페이지의 메인 스타일링을 정의하는 CSS 파일일 -->
     <link rel="stylesheet" href="./index.css" />
 
-    <title>BaeSua Portfolio</title> <!-- 브라우저 탭에 표시될 페이지 제목 정의 -->
+    <title>SuaBae Portfolio</title> <!-- 브라우저 탭에 표시될 페이지 제목 정의 -->
   </head>
   <body>
     <!-- top button : 페이지 맨 위로 돌아가는 버튼, 스크롤을 많이 내린 사용자가 빠르게 상단으로 돌아가도록 함. -->
@@ -71,8 +73,11 @@
       <!-- nav -->
       <ul id="gnb"> <!-- Unordered List : 네비게이션 메뉴가 목록 형식으로 구성-->
         <li><a href="#" class="about"> ABOUT </a></li>
-        <li><a href="#" class="work"> WORK EXPERIENCE </a></li>
+        <li><a href="#" class="edu"> EDUCATIONAL BACKGROUND </a></li>
+        <li><a href="#" class="exp"> EXPERIENCES </a></li>
         <li><a href="#" class="sideproj"> SIDE PROJECTS </a></li>
+        <li><a href="#" class="skills"> CERTIFICATE&SKILLS </a></li>
+        <li><a href="#" class="contacts"> CONTACTS </a></li>
         <li>
           <a href="https://github.com/suabae1008/baesua.github.io" target="_blank">GITHUB</a>
         </li>
@@ -84,20 +89,26 @@
     <!-- mainTitle -->
     <main>
       <article class="mainTitle">
+        <!-- 배경 이미지 추가 -->
+        <div class="BG"></div>
         <div class="mainTitleWrapper">
           <!-- logo -->
           <h1 id="logo"><a href="./">logo</a></h1>
           <div class="titleText"></div>
 
-          <!-- 배경 이미지 추가 -->
-          <div class="bgimg"></div>
-          <div class="tittle"></div>
-
           <div class="title">
-            <div class="titleName"></div>
-            <div class="titlePf">Bae Sua's Portfolio</div>
+            <div class="titleName">Sua Bae</div>
+            <div class="titleWeb">web</div>
+            <div class="titlePf">Portfolio</div>
           </div>
-          
+          <div class = "ContactInfo">
+              <div class="email">
+                <a href="mailto:bsa1008@g.skku.edu">Contact Via Email</a>
+              </div>
+              <div class="CV">
+                <a href="./images/CV.pdf" download>Download CV</a>
+              </div>
+          </div>
           <div class="scrollWrapper">
             <div class="scrollIcon">
               <div class="scrollCircle">circle</div>
@@ -106,9 +117,7 @@
             <div class="scrollDown">*Scroll Down</div>
           </div>
         
-          <div class="email">
-            <a href="mailto:bsa1008@g.skku.edu">bsa1008@g.skku.edu</a>
-          </div>
+          
           <div class="copyRight">
             &copy;2025 Bae Sua. All rights reserved
           </div>

@@ -283,32 +283,20 @@ body header.dark {
   height: 80px;
 }
 body header #gnb {
+  font-family: "Inter";
   list-style: none; /* 불릿 포인트 제거 */
   width: 500px; /*기본 width*/
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 500;
+  font-style: italic;
   display: flex;
   flex-direction: column; /* 수직 정렬 */
   align-items: flex-end; /* 오른쪽 정렬 */
   justify-content: space-between;
   position: absolute;
-  right: 54px;
-}
-/* 화면이 768px 이하일 때 */
-@media screen and (max-width: 768px) {
-  body header #gnb {
-    width: 80%; /* 화면 크기가 작은 경우 80%로 설정 */
-    right: 10px; /* 오른쪽 여백을 조금 추가 */
-  }
+  right: 5%;
 }
 
-/* 화면이 480px 이하일 때 */
-@media screen and (max-width: 480px) {
-  body header #gnb {
-    width: 90%; /* 화면이 더 작아지면 width를 더 줄여줌 */
-    right: 5px; /* 오른쪽 여백을 더 줄임 */
-  }
-}
 
 body header #gnb li a::after {
   content: "";
@@ -345,23 +333,52 @@ body main .mainTitle {
   z-index: -1;
   transition: 0.8s;
 }
-body main .mainTitle.active {
-  background: #fff;
-}
-body main .mainTitle .mainTitleWrapper .bgimg {
-  background: url(./Images/tree.jpeg) no-repeat center top;
-  background-size: auto 90%; /* 높이는 90%로 설정하고, 가로는 자동으로 조정 */
-  height: 100vh; /* 높이를 화면의 90%로 설정 */
+body main .mainTitle .BG {
+  background: url(./images/tree.jpeg) no-repeat center bottom; /* 이미지가 중앙 하단에 위치하도록 설정 */
+  background-size: auto 80%; /* 이미지의 비율을 유지하며 크기를 조정 */
+  background-position: 70% bottom;
+  height: 100vh; /* 화면 높이를 100%로 설정 */
   width: 100%; /* 너비는 100%로 설정 */
-  position: absolute; /* 요소를 절대 위치로 배치 */
-  top: 0;
-  left: 0;
-  background-position: calc(50% - 2%) top; /* 수평 중앙에서 10% 왼쪽으로 이동 */
+  position: absolute; /* 절대 위치로 설정 */
+  top: 0; /* 상단 0 위치에 고정 */
+  left: 0; /* 왼쪽 0 위치에 고정 */
 }
+
 body main .mainTitle .mainTitleWrapper {
   position: relative;
   height: 100%;
 }
+body main .mainTitle .mainTitleWrapper .title {
+  font-family: "Inter";
+  text-align: left;
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  top: 55%; /* 수직으로 가운데 정렬 */
+  left: 5%; /* 왼쪽에 위치 */
+  transform: translateY(-50%); /* 수직 가운데 정렬 */
+  cursor: default;
+  color: #000000;
+  font-size: 150px;
+}
+body main .mainTitle .mainTitleWrapper .ContactInfo {
+  position: absolute;
+  top: calc(55% + 300px); /* .title 아래쪽으로 이동 */
+  left: 5%;
+  transform: translateY(-50%);
+  
+  display: flex; /* 요소들을 가로로 정렬 */
+  flex-direction: row; /* 기본값이므로 안 써도 됨 */
+  justify-content: flex-start; /* 왼쪽 정렬 (필요하면 space-between 등 변경 가능) */
+  align-items: center; /* 세로 정렬을 중앙으로 */
+  gap: 20px; /* 요소들 간 간격 추가 */
+}
+
+body main .mainTitle.active {
+  background: #fff;
+}
+
+
 body main .mainTitle .mainTitleWrapper h1 {
   background: url(./images/logo.png) no-repeat 50%/cover;
   width: 154px;
@@ -393,42 +410,46 @@ body main .mainTitle .mainTitleWrapper .year {
   transform: translateX(-50%);
   cursor: default;
 }
-body main .mainTitle .mainTitleWrapper .title {
-  text-align: center;
-  width: 500px;
-  height: 200px;
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  cursor: default;
-}
-body main .mainTitle .mainTitleWrapper .title .titleName {
-  font-size: 76px;
-  font-weight: 700;
+
+body main .mainTitle .mainTitleWrapper .title .titleName, 
+body main .mainTitle .mainTitleWrapper .title .titleWeb,
+body main .mainTitle .mainTitleWrapper .title .titlePf {
+  font-weight: 400;
+  margin-bottom: -60px;
 }
 
-/* body main .mainTitle .mainTitleWrapper .title .titlePf {
-  font-size: 64px;
-  font-family: "Italiana", serif;
-  font-weight: 400;
-  margin-top: -5px;
-} */
-body main .mainTitle .mainTitleWrapper .title .titlePf {
-  position: absolute;
-  bottom: -30%;
-  font-size: 64px;
-  font-family: "Italiana", serif;
-  font-weight: 600;
-  margin-top: -5px;
-  color: #000000; /* 텍스트 색상 */
-  /* 
-  text-shadow: 
-    2px 2px 0 #000,  
-    -2px -2px 0 #000,  
-    2px -2px 0 #000,  
-    -2px 2px 0 #000; 검은색 테두리 효과 */
+
+body main .mainTitle .mainTitleWrapper .ContactInfo .email,
+body main .mainTitle .mainTitleWrapper .ContactInfo .CV {
+  font-weight: 300;
+  color: #000000; /* 원하는 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+  font-size: 16px;
+  padding: 0 15px; /* 좌우 여백 추가 */
+  line-height: 40px; /* 높이를 글자 크기에 맞춰 설정 */
+  text-align: center;
+  border: 1px #dddddd solid;
+  border-radius: 20px;
+  background-color: rgb(223, 223, 223);
+  transition: 0.3s;
+  display: inline-block; /* 콘텐츠에 맞게 길이가 조정되도록 설정 */
 }
+
+
+body main .mainTitle .mainTitleWrapper .ContactInfo .email a,
+body main .mainTitle .mainTitleWrapper .ContactInfo .CV a {
+  color: inherit; /* 부모의 색상(#bbb)을 상속받음 */
+  text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+body main .mainTitle .mainTitleWrapper .ContactInfo .email:hover,
+body main .mainTitle .mainTitleWrapper .ContactInfo .CV:hover {
+  text-decoration: none; /* 호버 시에도 밑줄 없애기 */
+  color: #ffffff; /* 호버 시 색상 변경 */
+  background-color: rgb(0, 0, 0);
+}
+
+
 
 /* 스크롤 아이콘 */
 body main .mainTitle .mainTitleWrapper .scrollWrapper {
@@ -461,7 +482,7 @@ body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollCircle 
 body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollIcon .scrollCircle {
   width: 30px;
   height: 30px;
-  background-image: url('./Images/apple.png'); /* 사과 이미지 경로 */
+  background-image: url('./images/apple.png'); /* 사과 이미지 경로 */
   background-size: cover; /* 이미지 크기 자동 조정 */
   background-position: center; /* 이미지가 원 안에서 중앙에 위치하도록 설정 */
   border-radius: 50%; /* 원형으로 만들기 */
@@ -496,26 +517,7 @@ body main .mainTitle .mainTitleWrapper .scrollWrapper .scrollDown {
 }
 
 
-body main .mainTitle .mainTitleWrapper .email {
-  font-size: 16px;
-  width: 230px;
-  height: 40px;
-  line-height: 40px;
-  margin: 0 0 20px 54px;
-  text-align: center;
-  border: 1px #bbb solid;
-  color: #bbb;
-  border-radius: 20px;
-  background-color: rgba(18, 18, 18, 0.5254901961);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transition: 0.3s;
-}
-body main .mainTitle .mainTitleWrapper .email:hover {
-  border: #fff solid 1px;
-  color: #fff;
-}
+
 body main .mainTitle .mainTitleWrapper .copyRight {
   font-size: 16px;
   margin: 0 54px 20px 0;
